@@ -24,15 +24,14 @@ module Whats
 
       def payload
         {
-          hsm: {
-            element_name: element_name,
-            language: language.is_a?(Hash) ? language : language_options(language),
-            localizable_params: params,
-            namespace: namespace
-          },
-          recipient_type: :individual,
           to: wa_id,
-          type: :hsm
+          type: "template",
+          template: {
+            namespace: namespace,
+            name: element_name,
+            language: language.is_a?(Hash) ? language : language_options(language),
+            components: params
+          }
         }
       end
 
