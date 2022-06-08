@@ -101,7 +101,7 @@ whats.send_hsm_message(
        "parameters": [
                         {
                             "type": "text",
-                            "text": venue.name
+                            "text": "variable value"
                         }
                     ]
    }]
