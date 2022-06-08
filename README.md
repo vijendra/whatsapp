@@ -96,10 +96,15 @@ whats.send_hsm_message(
   "cdb2df51_9816_c754_c5a4_64cdabdcad3e",
   "purchase_with_credit_card",
   "en",
-  [ # ordered list of replacements that will happen at the template
-    {default: "$10"},
-    {default: "300"},
-  ]
+  [{
+       "type": "body",
+       "parameters": [
+                        {
+                            "type": "text",
+                            "text": venue.name
+                        }
+                    ]
+   }]
 )
 
 # output:
